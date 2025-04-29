@@ -27,14 +27,9 @@ public class DisconnectReasonInfo {
         ALREADY_CONNECTED("already-connected"),
         ILLEGAL_DISCONNECT("illegal-disconnect");
 
-        private final String wikiHeader;
-
-        DisconnectCategory(String wikiHeader) {
-            this.wikiHeader = wikiHeader;
-        }
 
         public String getWikiURL() {
-            return "https://github.com/rfresh2/ZenithProxy/wiki/Disconnects#" + wikiHeader;
+            return "https://abyssdocs.gitbook.io";
         }
     }
 

@@ -199,12 +199,12 @@ public class Globals {
             Thread.setDefaultUncaughtExceptionHandler(
                 (thread, e) -> DEFAULT_LOG.error("Uncaught exception in thread {}", thread, e));
             EXECUTOR = Executors.newScheduledThreadPool(4, new ThreadFactoryBuilder()
-                .setNameFormat("ZenithProxy Scheduled Executor - #%d")
+                .setNameFormat("AbyssmalProxy Scheduled Executor - #%d")
                 .setDaemon(true)
                 .setUncaughtExceptionHandler((thread, e) -> DEFAULT_LOG.error("Uncaught exception in scheduled executor thread {}", thread, e))
                 .build());
             EVENT_BUS = new SimpleEventBus(Executors.newFixedThreadPool(2, new ThreadFactoryBuilder()
-                .setNameFormat("ZenithProxy Async EventBus - #%d")
+                .setNameFormat("AbyssmalProxy Async EventBus - #%d")
                 .setDaemon(true)
                 .setUncaughtExceptionHandler((thread, e) -> DEFAULT_LOG.error("Uncaught exception in event bus thread {}", thread, e))
                 .build()), DEFAULT_LOG);
