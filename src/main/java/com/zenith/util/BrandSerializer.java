@@ -7,7 +7,7 @@ import org.geysermc.mcprotocollib.protocol.codec.MinecraftTypes;
 
 @UtilityClass
 public class BrandSerializer {
-    private static final String BRAND = "AbyssmalProxy";
+    private static final String BRAND = "AbyssWalker";
 
     public static byte[] defaultBrand() {
         return serializeBrand(BRAND);
@@ -22,7 +22,7 @@ public class BrandSerializer {
         return bytes;
     }
 
-    // append ' (AbyssmalProxy)' to the end of the original brand
+    // append ' (AbyssWalker)' to the end of the original brand
     public static byte[] appendBrand(final byte[] original) {
         final var inBuf = Unpooled.wrappedBuffer(original);
         final var outBuf = Unpooled.buffer(100);
